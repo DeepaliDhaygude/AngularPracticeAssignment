@@ -1,0 +1,16 @@
+<p>binding works!</p>
+{{name1}}
+{{name2}}
+<br>
+<a [href]="link">Go to Google</a>
+<br>
+<img [src]="imagepath" alt="" width="300" height="300">
+
+<img [src]="myImagepath" alt="" width="300" height="300">
+<br>
+<button class="btn btn-success" (click)="showData()">Click me!!!</button>
+<br>
+Enter your name : <input type="text" name="fullname" [value]="defaultname">
+<br>
+Enter your age : <input type="text" name="age" [(ngModel)]="age">
+Your age is {{age}}

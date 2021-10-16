@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="str">
+        <h2>Structural Directive</h2>
+
+        <br>
+
+        <h4 *ngIf="showDataFlag">This is used to show an element in the DOM.</h4>
+
+        <br>
+
+        <select>
+            <option *ngFor="let nm of names">{{nm}}</option>
+        </select>
+
+        <br>
+        <br>
+
+        <div [ngSwitch]="num">
+            <div *ngSwitchCase="'1'">One</div>
+            <div *ngSwitchCase="'2'">Two</div>
+            <div *ngSwitchCase="'3'">Three</div>
+            <div *ngSwitchCase="'4'">Four</div>
+            <div *ngSwitchCase="'5'">Five</div>
+            <div *ngSwitchDefaultCase>Select from these</div>
+        </div>
+    </div>
+
+
+<div [ngClass]="myClass1">
+    <!-- <div class="test1"> -->
+    <p>This is to understand attribute directives</p>
+</div>
+
+<div [ngClass]="showDataFlag ? 'test1': 'test2'">
+    <p>This is to understand attribute directives with another example</p>
+</div>
+
+<div [ngStyle]="{'color': 'hotpink', 'font-size': '45px', 'font-weight': 'bold'}">
+    <p> This is to understand ngStyle attribute directive</p>
+</div>
+
+<div [ngStyle]="myStyle">
+    <p> This is to understand ngStyle attribute directive</p>
+</div>
+<div class="cust">
+    This is to show custom directive.
+</div>
+
+<br><br>
+<h1>Custom Directive</h1>
+<h1 appCust>This used to show Custom Directive</h1>
+</div>
+
